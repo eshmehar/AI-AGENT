@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report #{{ report['id'] }}</title>
+</head>
+<body>
+    <a href="/">← Back to all reports</a>
+    <h1>Report #{{ report['id'] }}</h1>
+    <p><strong>Query:</strong> {{ report['query'] }}</p>
+    <p><strong>Date:</strong> {{ report['timestamp'] }}</p>
+    <hr>
+    <h3>Summary</h3>
+    <pre>{{ report['summary'] }}</pre>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report #{{ report['id'] }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        pre {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            text-align: left;
+            white-space: pre-wrap;
+            font-size: 15px;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+        a {
+            color: #e74c3c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 8px 16px;
+            background: #3498db;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-link">← Back to all reports</a>
+    <h1> Report #{{ report['id'] }}</h1>
+    <p><strong> Query:</strong> {{ report['query'] }}</p>
+    <p><strong> Date:</strong> {{ report['timestamp'] }}</p>
+    <hr>
+    <h3> AI Summary</h3>
+    <pre>{{ report['summary'] }}</pre>
+</body>
+</html>
